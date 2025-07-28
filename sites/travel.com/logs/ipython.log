@@ -1,0 +1,85 @@
+2025-07-22 05:55:05,695 INFO ipython === bench console session ===
+2025-07-22 05:55:05,695 INFO ipython frappe.sendmail(
+    recipients=["your@email.com"],
+    subject="Test Email",
+    message="This is a test."
+)
+2025-07-22 05:55:05,695 INFO ipython === session end ===
+2025-07-22 06:14:13,881 INFO ipython === bench console session ===
+2025-07-22 06:14:13,882 INFO ipython frappe.get_all("Destination Vendor", filters={"email": "paragon@gmail.com"}, fields=["name", "destination"])
+2025-07-22 06:14:13,882 INFO ipython === session end ===
+2025-07-22 06:20:14,960 INFO ipython === bench console session ===
+2025-07-22 06:20:14,963 INFO ipython frappe.get_all("Destination Vendor", filters={"email": "paragon@gmail.com"}, fields=["name", "destination"])
+2025-07-22 06:20:14,963 INFO ipython === session end ===
+2025-07-22 06:22:17,956 INFO ipython === bench console session ===
+2025-07-22 06:22:17,956 INFO ipython booking = frappe.get_doc("Travel Booking", "Booking0003")
+booking.destination
+2025-07-22 06:22:17,956 INFO ipython vendor = frappe.get_value("Destination Vendor", {"email": "paragon@gmail.com"}, "name")
+
+print("Hotel:", booking.hotel)
+print("Cab:", booking.cab)
+print("Activities:", [a.vendor for a in booking.activities])
+print("Vendor:", vendor)
+2025-07-22 06:22:17,956 INFO ipython === session end ===
+2025-07-22 06:38:21,206 INFO ipython === bench console session ===
+2025-07-22 06:38:21,208 INFO ipython frappe.get_all("Destination Vendor", filters={"email": "paragon@gmail.com"}, fields=["name", "destination"])
+2025-07-22 06:38:21,208 INFO ipython ex
+2025-07-22 06:38:21,208 INFO ipython === session end ===
+2025-07-24 09:44:37,701 INFO ipython === bench console session ===
+2025-07-24 09:44:37,702 INFO ipython frappe.get_doc("Server Script", "restrict_lead_list_for_sales_team").delete()
+frappe.db.commit()
+2025-07-24 09:44:37,703 INFO ipython === session end ===
+2025-07-24 09:55:56,957 INFO ipython === bench console session ===
+2025-07-24 09:55:56,958 INFO ipython frappe.get_all("Server Script", filters={"name": "restrict_lead_list_for_sales_team"})
+2025-07-24 09:55:56,958 INFO ipython === session end ===
+2025-07-24 10:05:40,044 INFO ipython === bench console session ===
+2025-07-24 10:05:40,044 INFO ipython bench console
+frappe.get_all("Server Script", filters={"name": "restrict_lead_list_for_sales_team"})
+2025-07-24 10:05:40,044 INFO ipython frappe.get_all("Server Script", filters={"name": "restrict_lead_list_for_sales_team"})
+2025-07-24 10:05:40,044 INFO ipython frappe.get_all("Server Script", filters={"script_type": "API"}, fields=["name", "script"])
+2025-07-24 10:05:40,044 INFO ipython === session end ===
+2025-07-24 10:19:42,486 INFO ipython === bench console session ===
+2025-07-24 10:19:42,487 INFO ipython doc = frappe.get_doc("Server Script", "Restrict Lead List for Sales Team")
+doc.script = """
+@frappe.whitelist()
+def get(data):
+    # Only apply for Lead list view
+    if data.get("doctype") != "Lead":
+        return frappe.call("frappe.desk.reportview.get", data)
+
+    user = frappe.session.user
+    roles = frappe.get_roles(user)
+
+    if "Sales Team" in roles and user != "Administrator":
+        if not data.get("filters"):
+            data["filters"] = []
+
+        data["filters"].append(["_assign", "like", f"%{user}%"])
+
+    return frappe.call("frappe.desk.reportview.get", data)
+"""
+doc.save()
+frappe.db.commit()
+2025-07-24 10:19:42,487 INFO ipython === session end ===
+2025-07-24 10:39:14,352 INFO ipython === bench console session ===
+2025-07-24 10:39:14,353 INFO ipython frappe.delete_doc("Server Script", "Restrict Lead List for Sales Team")
+frappe.db.commit()
+2025-07-24 10:39:14,353 INFO ipython === session end ===
+2025-07-24 10:53:25,198 INFO ipython === bench console session ===
+2025-07-24 10:53:25,198 INFO ipython frappe.delete_doc("Server Script", "Restrict Lead List for Sales Team", force=True)
+frappe.db.commit()
+2025-07-24 10:53:25,198 INFO ipython === session end ===
+2025-07-24 11:01:35,612 INFO ipython === bench console session ===
+2025-07-24 11:01:35,614 INFO ipython frappe.delete_doc("Server Script", "Restrict Lead List for Sales Team", force=True)
+2025-07-24 11:01:35,614 INFO ipython frappe.delete_doc("Server Script", "Restrict Lead List for Sales Team", force=True)
+frappe.db.commit()
+2025-07-24 11:01:35,614 INFO ipython frappe.get_all("Server Script", filters={"name": "Restrict Lead List for Sales Team"})
+2025-07-24 11:01:35,614 INFO ipython === session end ===
+2025-07-24 11:22:57,539 INFO ipython === bench console session ===
+2025-07-24 11:22:57,541 INFO ipython frappe.get_doc({
+    "doctype": "Permission Query Condition",
+    "role": "Sales Team",
+    "reference_doctype": "Lead",
+    "query": "`_assign` LIKE CONCAT('%', %(user)s, '%')"
+}).insert()
+2025-07-24 11:22:57,542 INFO ipython === session end ===

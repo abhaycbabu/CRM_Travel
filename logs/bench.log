@@ -1,0 +1,378 @@
+2025-07-21 04:13:46,867 DEBUG cd crm-bench && python3 -m venv env
+2025-07-21 04:13:49,084 DEBUG cd crm-bench && /home/abhay_admin/crm-bench/env/bin/python -m pip install --quiet --upgrade pip
+2025-07-21 04:13:50,458 DEBUG cd crm-bench && /home/abhay_admin/crm-bench/env/bin/python -m pip install --quiet wheel
+2025-07-21 04:13:51,949 LOG Getting frappe
+2025-07-21 04:13:51,949 DEBUG cd crm-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2025-07-21 04:13:56,349 LOG Installing frappe
+2025-07-21 04:13:56,350 DEBUG cd /home/abhay_admin/crm-bench && /home/abhay_admin/crm-bench/env/bin/python -m pip install --quiet --upgrade -e /home/abhay_admin/crm-bench/apps/frappe 
+2025-07-21 04:14:28,119 DEBUG cd /home/abhay_admin/crm-bench/apps/frappe && yarn install --check-files
+2025-07-21 04:14:46,243 DEBUG cd /home/abhay_admin/crm-bench && sudo supervisorctl restart frappe:
+2025-07-21 04:14:46,386 WARNING cd /home/abhay_admin/crm-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-07-21 04:14:46,386 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-07-21 04:14:46,386 DEBUG cd crm-bench && bench build
+2025-07-21 04:14:46,489 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-21 04:15:00,610 LOG setting up backups
+2025-07-21 04:15:00,622 LOG backups were set up
+2025-07-21 04:15:00,622 INFO Bench crm-bench initialized
+2025-07-21 04:15:00,802 INFO A newer version of bench is available: 5.25.1 → 5.25.9
+2025-07-21 04:15:49,379 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-21 04:15:49,566 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-21 04:15:49,567 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-21 04:15:49,588 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-21 04:15:49,593 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-21 04:16:55,935 INFO /home/abhay_admin/.local/bin/bench new-site travel.com
+2025-07-21 04:17:53,223 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-21 04:18:03,353 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-21 04:18:03,356 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-21 04:18:03,357 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-21 04:18:03,368 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-21 04:18:39,226 INFO /home/abhay_admin/.local/bin/bench use travel.com
+2025-07-21 04:18:43,891 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-21 04:18:44,089 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-21 04:18:44,090 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-21 04:18:44,091 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-21 04:18:44,096 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-21 04:38:21,829 INFO /home/abhay_admin/.local/bin/bench get-app erpnext --branch version-15
+2025-07-21 04:38:22,300 LOG Getting erpnext
+2025-07-21 04:38:22,300 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2025-07-21 04:38:29,535 LOG Installing erpnext
+2025-07-21 04:38:29,535 DEBUG cd /home/abhay_admin/crm-bench && /home/abhay_admin/crm-bench/env/bin/python -m pip install --quiet --upgrade -e /home/abhay_admin/crm-bench/apps/erpnext 
+2025-07-21 04:38:34,154 DEBUG cd /home/abhay_admin/crm-bench/apps/erpnext && yarn install --check-files
+2025-07-21 04:38:34,534 DEBUG bench build --app erpnext
+2025-07-21 04:38:34,629 INFO /home/abhay_admin/.local/bin/bench build --app erpnext
+2025-07-21 04:39:09,809 DEBUG cd /home/abhay_admin/crm-bench && sudo supervisorctl restart frappe:
+2025-07-21 04:39:09,960 WARNING cd /home/abhay_admin/crm-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-07-21 04:39:09,960 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-07-21 04:39:10,055 INFO A newer version of bench is available: 5.25.1 → 5.25.9
+2025-07-21 04:39:44,398 INFO /home/abhay_admin/.local/bin/bench --site travel.com install-app erpnext
+2025-07-21 04:40:59,585 INFO /home/abhay_admin/.local/bin/bench new-app travel_crm
+2025-07-21 04:40:59,590 LOG creating new app travel_crm
+2025-07-21 04:43:27,086 LOG Installing travel_crm
+2025-07-21 04:43:27,087 DEBUG cd /home/abhay_admin/crm-bench && /home/abhay_admin/crm-bench/env/bin/python -m pip install --quiet --upgrade -e /home/abhay_admin/crm-bench/apps/travel_crm 
+2025-07-21 04:43:28,731 DEBUG bench build --app travel_crm
+2025-07-21 04:43:28,835 INFO /home/abhay_admin/.local/bin/bench build --app travel_crm
+2025-07-21 04:43:31,026 DEBUG cd /home/abhay_admin/crm-bench && sudo supervisorctl restart frappe:
+2025-07-21 04:43:40,891 WARNING cd /home/abhay_admin/crm-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-07-21 04:43:40,891 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-07-21 04:43:31,181 INFO A newer version of bench is available: 5.25.1 → 5.25.9
+2025-07-21 04:43:58,071 INFO /home/abhay_admin/.local/bin/bench --site travel.com install-app travel_crm
+2025-07-21 04:46:22,904 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-21 04:46:23,122 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-21 04:46:23,124 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-21 04:46:23,134 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-21 04:46:23,134 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-21 06:00:01,584 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-21 11:16:46,368 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-21 11:16:46,633 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-21 11:16:46,634 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-21 11:16:46,644 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-21 11:16:46,661 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-21 11:18:15,198 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-21 11:18:15,417 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-21 11:18:15,419 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-21 11:18:15,422 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-21 11:18:15,437 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-21 12:00:01,620 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-22 04:09:44,886 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-22 04:09:45,088 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-22 04:09:45,087 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-22 04:09:45,097 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-22 04:09:45,099 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-22 04:40:13,155 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-22 05:02:24,438 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-22 05:26:06,895 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-22 05:55:20,538 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-22 05:55:31,715 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-22 05:55:31,715 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-22 05:55:31,717 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-22 05:55:31,721 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-22 06:00:01,738 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-22 06:07:48,704 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-22 06:19:49,813 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-22 06:21:11,750 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-22 06:34:35,469 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-22 06:55:22,320 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-22 06:56:25,887 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-22 09:46:01,876 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-22 09:48:00,022 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-22 09:48:00,252 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-22 09:48:00,252 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-22 09:48:00,275 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-22 09:48:00,279 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-22 11:01:04,601 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-22 11:01:04,848 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-22 11:01:04,852 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-22 11:01:04,853 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-22 11:01:04,862 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-22 11:45:26,904 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-22 11:45:27,158 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-22 11:45:27,161 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-22 11:45:27,164 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-22 11:45:27,172 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-22 12:00:01,545 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-22 12:38:18,535 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-22 12:38:18,815 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-22 12:38:18,820 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-22 12:38:18,820 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-22 12:38:18,821 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-23 04:02:29,697 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-23 04:02:18,502 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-23 04:02:18,503 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-23 04:02:18,518 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-23 04:02:18,520 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-23 04:02:52,584 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-23 06:00:02,184 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-23 06:02:01,788 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-23 06:02:02,026 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-23 06:02:02,026 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-23 06:02:02,027 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-23 06:02:02,028 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-23 06:19:07,140 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-23 06:19:07,336 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-23 06:19:07,338 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-23 06:19:07,359 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-23 06:19:07,359 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-23 07:14:45,314 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-23 07:16:14,533 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-23 07:18:19,467 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-23 08:54:17,544 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-23 08:54:17,841 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-23 08:54:17,842 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-23 08:54:17,848 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-23 08:54:17,850 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-23 09:34:36,115 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-23 09:34:36,383 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-23 09:34:36,389 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-23 09:34:36,391 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-23 09:34:36,391 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-23 09:35:27,878 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-23 09:38:01,196 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-23 09:49:36,744 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-23 09:49:36,975 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-23 09:49:36,981 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-23 09:49:36,991 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-23 09:49:36,995 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-23 11:26:40,091 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-23 11:26:31,455 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-23 11:53:07,038 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-23 11:53:07,254 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-23 11:53:07,266 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-23 11:53:07,266 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-23 11:53:07,267 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-23 12:00:02,025 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-24 04:01:32,669 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 04:01:32,871 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 04:01:32,872 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 04:01:32,872 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 04:01:32,879 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 04:30:29,748 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 04:34:01,837 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 04:34:11,755 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 04:34:12,001 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 04:34:12,001 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 04:34:12,003 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 04:34:12,006 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 06:00:02,059 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-24 06:20:23,060 INFO /home/abhay_admin/.local/bin/bench --site tavel.com export-fixtures
+2025-07-24 06:20:31,196 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 06:37:43,579 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 07:18:39,700 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-24 07:20:02,874 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 07:20:27,435 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 07:20:27,665 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 07:20:27,677 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 07:20:27,679 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 07:20:27,688 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 07:20:40,431 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 07:21:14,313 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-24 08:53:27,182 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 08:53:50,147 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-24 08:54:11,555 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 08:54:24,306 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 08:54:24,529 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 08:54:24,536 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 08:54:24,541 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 08:54:24,543 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 08:55:13,830 INFO /home/abhay_admin/.local/bin/bench set-config allow_server_script true
+2025-07-24 08:55:57,137 INFO /home/abhay_admin/.local/bin/bench set-config allow_server_script true
+2025-07-24 08:56:06,110 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 08:56:06,307 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 08:56:06,313 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 08:56:06,314 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 08:56:06,316 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 08:56:48,964 INFO /home/abhay_admin/.local/bin/bench set-config -g server_script_enabled 1
+2025-07-24 08:57:44,727 INFO /home/abhay_admin/.local/bin/bench --site travel.com set-config server_script_enabled true
+2025-07-24 09:07:10,457 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-24 09:07:30,088 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 09:08:43,616 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:09:36,003 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:11:42,607 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:15:11,594 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:34:39,065 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-24 09:34:56,184 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 09:35:07,250 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 09:35:07,515 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 09:35:07,518 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 09:35:07,524 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 09:35:07,536 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 09:36:29,093 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:37:02,323 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:37:05,928 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-24 09:37:23,644 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 09:38:04,991 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 09:38:05,197 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 09:38:05,198 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 09:38:05,200 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 09:38:05,203 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 09:40:00,310 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-24 09:40:21,947 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-24 09:40:26,267 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-24 09:40:55,655 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 09:41:18,033 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 09:41:18,228 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 09:41:18,237 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 09:41:18,237 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 09:41:18,240 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 09:43:51,392 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-24 09:44:42,019 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:46:43,889 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 09:48:31,037 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-24 09:48:48,168 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 09:49:01,594 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 09:49:01,795 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 09:49:01,795 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 09:49:01,801 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 09:49:01,807 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 09:50:39,491 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:54:44,792 INFO /home/abhay_admin/.local/bin/bench --site travel.com clear-cache
+2025-07-24 09:54:57,363 INFO /home/abhay_admin/.local/bin/bench restart
+2025-07-24 09:55:02,884 DEBUG cd /home/abhay_admin/crm-bench && sudo supervisorctl restart frappe:
+2025-07-24 09:55:03,023 WARNING cd /home/abhay_admin/crm-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-07-24 09:55:03,024 WARNING /home/abhay_admin/.local/bin/bench restart executed with exit code 1
+2025-07-24 09:55:03,756 INFO A newer version of bench is available: 5.25.1 → 5.25.9
+2025-07-24 09:55:11,854 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 09:55:12,052 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 09:55:12,056 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 09:55:12,056 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 09:55:12,059 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 09:55:44,551 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-24 09:56:07,854 INFO /home/abhay_admin/.local/bin/bench use travel.com
+2025-07-24 09:57:30,709 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 09:58:49,674 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-24 10:05:46,943 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 10:06:09,958 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 10:06:26,215 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 10:06:26,422 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 10:06:26,422 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 10:06:26,426 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 10:06:26,431 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 10:07:51,435 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 10:07:51,640 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 10:07:51,640 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 10:07:51,643 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 10:07:51,643 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 10:08:30,792 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 10:10:23,756 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 10:10:30,599 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 10:12:44,934 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 10:13:18,029 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 10:16:11,999 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 10:18:57,627 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-24 10:20:00,681 INFO /home/abhay_admin/.local/bin/bench --site travel.com clear-cache
+2025-07-24 10:20:18,550 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 10:20:18,739 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 10:20:18,739 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 10:20:18,747 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 10:20:18,747 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 10:31:34,961 INFO /home/abhay_admin/.local/bin/bench export-fixtures --app travel_crm
+2025-07-24 10:32:05,305 INFO /home/abhay_admin/.local/bin/bench export-fixtures --app travel_crm
+2025-07-24 10:34:33,814 INFO /home/abhay_admin/.local/bin/bench export-fixtures --app travel_crm
+2025-07-24 10:36:22,589 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-24 10:39:20,040 INFO /home/abhay_admin/.local/bin/bench export-fixtures --app travel_crm
+2025-07-24 10:39:52,478 INFO /home/abhay_admin/.local/bin/bench export-fixtures --app travel_crm
+2025-07-24 10:40:09,472 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-24 10:40:26,105 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-24 10:40:53,512 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 10:41:06,066 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 10:41:06,268 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 10:41:06,269 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 10:41:06,272 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 10:41:06,280 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 10:47:38,013 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-24 10:52:28,411 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 10:53:01,733 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-24 10:53:37,160 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 10:53:37,371 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 10:53:37,373 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 10:53:37,380 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 10:53:37,380 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-24 10:59:32,190 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-24 11:01:40,162 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-24 11:10:51,271 INFO /home/abhay_admin/.local/bin/bench console
+2025-07-24 12:00:01,639 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-24 12:42:09,730 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 12:42:45,446 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-24 12:42:45,674 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-24 12:42:45,687 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-24 12:42:45,687 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-24 12:42:45,690 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-25 04:07:56,299 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-25 04:07:56,508 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-25 04:07:56,510 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-25 04:07:56,512 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-25 04:07:56,513 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-25 05:31:38,013 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-25 05:31:58,571 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-25 05:31:58,800 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-25 05:31:58,801 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-25 05:31:58,803 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-25 05:31:58,803 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-25 06:00:00,610 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-25 06:56:39,570 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-25 09:22:42,236 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-25 09:22:42,471 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-25 09:22:42,473 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-25 09:22:42,476 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-25 09:22:42,481 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-25 12:00:01,145 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-26 04:22:36,364 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-26 04:22:36,567 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-26 04:22:36,569 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-26 04:22:36,570 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-26 04:22:36,572 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-26 06:00:15,872 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-26 11:21:01,624 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-26 12:00:01,260 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-26 12:01:00,642 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-26 12:01:07,722 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-26 12:02:40,586 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-26 12:03:34,691 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-26 12:26:50,346 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-28 04:04:11,246 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-28 04:04:17,217 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-28 04:04:17,398 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-28 04:04:17,398 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-28 04:04:17,401 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-28 04:04:17,403 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-28 06:00:01,551 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup
+2025-07-28 09:02:21,891 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-28 09:02:22,135 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-28 09:02:22,136 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-28 09:02:22,140 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-28 09:02:22,147 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-28 09:04:21,556 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-28 09:04:26,981 INFO /home/abhay_admin/.local/bin/bench build
+2025-07-28 09:07:22,948 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-28 09:07:23,157 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-28 09:07:23,160 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-28 09:07:23,162 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-28 09:07:23,177 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-28 09:08:40,306 INFO /home/abhay_admin/.local/bin/bench migrate
+2025-07-28 10:13:12,920 INFO /home/abhay_admin/.local/bin/bench export-fixtures
+2025-07-28 11:24:03,062 INFO /home/abhay_admin/.local/bin/bench start
+2025-07-28 11:24:03,276 INFO /home/abhay_admin/.local/bin/bench watch
+2025-07-28 11:24:03,283 INFO /home/abhay_admin/.local/bin/bench worker
+2025-07-28 11:24:03,288 INFO /home/abhay_admin/.local/bin/bench serve --port 8003
+2025-07-28 11:24:03,291 INFO /home/abhay_admin/.local/bin/bench schedule
+2025-07-28 11:24:11,760 INFO /home/abhay_admin/.local/bin/bench clear-cache
+2025-07-28 12:00:04,821 INFO /home/abhay_admin/.local/bin/bench --verbose --site all backup

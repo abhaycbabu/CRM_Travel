@@ -1,0 +1,31 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "15.74.1"
+    },
+    "erpnext": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "196c3fc6564e4be93a9afee6ba3d114d22e28c1a",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "15.70.2"
+    },
+    "travel_crm": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "bb11cb75eea8231439a843879b8957d2192e18de",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "0.0.1"
+    }
+}

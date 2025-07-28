@@ -1,0 +1,1089 @@
+2025-07-25 05:29:16,186 ERROR frappe Could not take error snapshot: unterminated string literal (detected at line 65) (hooks.py, line 65)
+Site: travel.com
+Form Dict: {'routes': '[{"creation":"2025-07-25 10:59:06","route":"List/Custom Field/List"}]'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 197, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 65
+    "Customer-custom_preferred_destination
+    ^
+SyntaxError: unterminated string literal (detected at line 65)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1308, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 65
+    "Customer-custom_preferred_destination
+    ^
+SyntaxError: unterminated string literal (detected at line 65)
+2025-07-25 05:29:16,189 ERROR frappe Failed to run after request hook
+Site: travel.com
+Form Dict: {'routes': '[{"creation":"2025-07-25 10:59:06","route":"List/Custom Field/List"}]'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 65
+    "Customer-custom_preferred_destination
+    ^
+SyntaxError: unterminated string literal (detected at line 65)
+2025-07-25 05:29:19,582 ERROR frappe Could not take error snapshot: unterminated string literal (detected at line 65) (hooks.py, line 65)
+Site: travel.com
+Form Dict: {'doctype': 'Custom Field', 'name': 'Customer-custom_expected_travel_date'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 197, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 65
+    "Customer-custom_preferred_destination
+    ^
+SyntaxError: unterminated string literal (detected at line 65)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1308, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 65
+    "Customer-custom_preferred_destination
+    ^
+SyntaxError: unterminated string literal (detected at line 65)
+2025-07-25 05:29:19,584 ERROR frappe Failed to run after request hook
+Site: travel.com
+Form Dict: {'doctype': 'Custom Field', 'name': 'Customer-custom_expected_travel_date'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 65
+    "Customer-custom_preferred_destination
+    ^
+SyntaxError: unterminated string literal (detected at line 65)
+2025-07-25 05:58:47,990 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'docname': 'Booking0008', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.send_vendor_options'}
+2025-07-25 06:52:08,502 ERROR frappe Could not take error snapshot: unterminated string literal (detected at line 67) (hooks.py, line 67)
+Site: travel.com
+Form Dict: {'doctype': 'Custom Field', 'fields': '["`tabCustom Field`.`name`","`tabCustom Field`.`owner`","`tabCustom Field`.`creation`","`tabCustom Field`.`modified`","`tabCustom Field`.`modified_by`","`tabCustom Field`.`_user_tags`","`tabCustom Field`.`_comments`","`tabCustom Field`.`_assign`","`tabCustom Field`.`_liked_by`","`tabCustom Field`.`docstatus`","`tabCustom Field`.`idx`","`tabCustom Field`.`dt`","`tabCustom Field`.`fieldname`","`tabCustom Field`.`fieldtype`","`tabCustom Field`.`options`","`tabCustom Field`.`reqd`"]', 'filters': '[]', 'order_by': '`tabCustom Field`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 197, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Customer-custom_expected_travel_date
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1308, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Customer-custom_expected_travel_date
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:52:08,507 ERROR frappe Failed to run after request hook
+Site: travel.com
+Form Dict: {'doctype': 'Custom Field', 'fields': '["`tabCustom Field`.`name`","`tabCustom Field`.`owner`","`tabCustom Field`.`creation`","`tabCustom Field`.`modified`","`tabCustom Field`.`modified_by`","`tabCustom Field`.`_user_tags`","`tabCustom Field`.`_comments`","`tabCustom Field`.`_assign`","`tabCustom Field`.`_liked_by`","`tabCustom Field`.`docstatus`","`tabCustom Field`.`idx`","`tabCustom Field`.`dt`","`tabCustom Field`.`fieldname`","`tabCustom Field`.`fieldtype`","`tabCustom Field`.`options`","`tabCustom Field`.`reqd`"]', 'filters': '[]', 'order_by': '`tabCustom Field`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Customer-custom_expected_travel_date
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:52:18,303 ERROR frappe Could not take error snapshot: unterminated string literal (detected at line 67) (hooks.py, line 67)
+Site: travel.com
+Form Dict: {'routes': '[{"creation":"2025-07-25 12:22:07","route":"List/Custom Field/List"}]'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 197, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Customer-custom_expected_travel_date
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1308, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Customer-custom_expected_travel_date
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:52:18,305 ERROR frappe Failed to run after request hook
+Site: travel.com
+Form Dict: {'routes': '[{"creation":"2025-07-25 12:22:07","route":"List/Custom Field/List"}]'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Customer-custom_expected_travel_date
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:53:20,991 ERROR frappe Could not take error snapshot: unterminated string literal (detected at line 67) (hooks.py, line 67)
+Site: travel.com
+Form Dict: {'doctype': 'Sales Order'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 197, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1308, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:53:20,992 ERROR frappe Could not take error snapshot: unterminated string literal (detected at line 67) (hooks.py, line 67)
+Site: travel.com
+Form Dict: {'doctype': 'Sales Order'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 197, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1308, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:53:21,000 ERROR frappe Failed to run after request hook
+Site: travel.com
+Form Dict: {'doctype': 'Sales Order'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:53:21,003 ERROR frappe Failed to run after request hook
+Site: travel.com
+Form Dict: {'doctype': 'Sales Order'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:53:22,594 ERROR frappe Could not take error snapshot: unterminated string literal (detected at line 67) (hooks.py, line 67)
+Site: travel.com
+Form Dict: {'doctype': 'DocType', 'docname': 'Sales Order Item', 'fields': '[]'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 197, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1308, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 06:53:22,596 ERROR frappe Failed to run after request hook
+Site: travel.com
+Form Dict: {'doctype': 'DocType', 'docname': 'Sales Order Item', 'fields': '[]'}
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1619, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1588, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abhay_admin/crm-bench/apps/frappe/frappe/__init__.py", line 1454, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/abhay_admin/crm-bench/apps/travel_crm/travel_crm/hooks.py", line 67
+    "Sales Order-custom_travel_booking
+    ^
+SyntaxError: unterminated string literal (detected at line 67)
+2025-07-25 08:30:50,753 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking0009', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_ops_project'}
+2025-07-25 08:32:40,812 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking0009', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_ops_project'}
+2025-07-25 08:33:02,701 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking0009', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_ops_project'}
+2025-07-25 08:35:19,548 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking0009', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_ops_project'}
+2025-07-25 11:41:27,600 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'docname': 'Booking0009', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.send_vendor_options'}
+2025-07-26 09:57:10,015 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0001', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 09:57:38,738 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0001', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 09:58:33,500 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0001', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 09:58:37,821 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0001', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 11:50:30,338 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0006', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 11:50:53,911 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0006', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 11:53:01,186 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0006', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 11:57:02,825 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0006', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 12:05:18,275 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0006', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-26 12:06:02,472 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'booking_name': 'Booking-0006', 'cmd': 'travel_crm.travel_crm.doctype.travel_booking.travel_booking.create_visa_project_with_tasks'}
+2025-07-28 04:12:17,484 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Travel Booking', 'with_parent': '1', 'cached_timestamp': '', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2025-07-28 04:13:33,877 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Travel Booking', 'with_parent': '1', 'cached_timestamp': '', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2025-07-28 09:34:01,510 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doc': '{"name":"TASK-2025-00016","owner":"Administrator","creation":"2025-07-26 15:58:38.420124","modified":"2025-07-26 15:58:38.420124","modified_by":"Administrator","docstatus":0,"idx":1,"subject":"Business 2","project":"PROJ-0009","is_group":0,"is_template":0,"status":"Completed","priority":"Low","task_weight":0,"expected_time":0,"start":0,"progress":0,"duration":0,"is_milestone":0,"depends_on_tasks":"","actual_time":0,"total_costing_amount":0,"total_billing_amount":0,"company":"ETravels","lft":31,"rgt":32,"old_parent":"","doctype":"Task","depends_on":[],"__last_sync_on":"2025-07-28T09:33:50.153Z","__unsaved":1,"completed_on":"2025-07-28"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-07-28 10:31:39,062 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Travel Booking', 'fields': '["`tabTravel Booking`.`name`","`tabTravel Booking`.`owner`","`tabTravel Booking`.`creation`","`tabTravel Booking`.`modified`","`tabTravel Booking`.`modified_by`","`tabTravel Booking`.`_user_tags`","`tabTravel Booking`.`_comments`","`tabTravel Booking`.`_assign`","`tabTravel Booking`.`_liked_by`","`tabTravel Booking`.`docstatus`","`tabTravel Booking`.`idx`","`tabTravel Booking`.`status`"]', 'filters': '[]', 'order_by': '`tabTravel Booking`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-07-28 10:32:04,625 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Travel Booking', 'fields': '["`tabTravel Booking`.`name`","`tabTravel Booking`.`owner`","`tabTravel Booking`.`creation`","`tabTravel Booking`.`modified`","`tabTravel Booking`.`modified_by`","`tabTravel Booking`.`_user_tags`","`tabTravel Booking`.`_comments`","`tabTravel Booking`.`_assign`","`tabTravel Booking`.`_liked_by`","`tabTravel Booking`.`docstatus`","`tabTravel Booking`.`idx`","`tabTravel Booking`.`status`"]', 'filters': '[]', 'order_by': '`tabTravel Booking`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-07-28 10:32:30,948 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Travel Booking', 'fields': '["`tabTravel Booking`.`name`","`tabTravel Booking`.`owner`","`tabTravel Booking`.`creation`","`tabTravel Booking`.`modified`","`tabTravel Booking`.`modified_by`","`tabTravel Booking`.`_user_tags`","`tabTravel Booking`.`_comments`","`tabTravel Booking`.`_assign`","`tabTravel Booking`.`_liked_by`","`tabTravel Booking`.`docstatus`","`tabTravel Booking`.`idx`","`tabTravel Booking`.`status`"]', 'filters': '[]', 'order_by': '`tabTravel Booking`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-07-28 10:43:16,281 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Task', 'name': 'TASK-2025-00014', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-07-28 11:59:38,402 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Travel Booking', 'fields': '["`tabTravel Booking`.`name`","`tabTravel Booking`.`owner`","`tabTravel Booking`.`creation`","`tabTravel Booking`.`modified`","`tabTravel Booking`.`modified_by`","`tabTravel Booking`.`_user_tags`","`tabTravel Booking`.`_comments`","`tabTravel Booking`.`_assign`","`tabTravel Booking`.`_liked_by`","`tabTravel Booking`.`docstatus`","`tabTravel Booking`.`idx`","`tabTravel Booking`.`customer`","`tabTravel Booking`.`assigned_ops_person`","`tabTravel Booking`.`status`"]', 'filters': '[]', 'order_by': '`tabTravel Booking`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-07-28 12:03:19,907 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Travel Booking', 'fields': '["`tabTravel Booking`.`name`","`tabTravel Booking`.`owner`","`tabTravel Booking`.`creation`","`tabTravel Booking`.`modified`","`tabTravel Booking`.`modified_by`","`tabTravel Booking`.`_user_tags`","`tabTravel Booking`.`_comments`","`tabTravel Booking`.`_assign`","`tabTravel Booking`.`_liked_by`","`tabTravel Booking`.`docstatus`","`tabTravel Booking`.`idx`","`tabTravel Booking`.`customer`","`tabTravel Booking`.`assigned_ops_person`","`tabTravel Booking`.`status`"]', 'filters': '[]', 'order_by': '`tabTravel Booking`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-07-28 12:04:06,487 ERROR frappe New Exception collected in error log
+Site: travel.com
+Form Dict: {'doctype': 'Travel Booking', 'fields': '["`tabTravel Booking`.`name`","`tabTravel Booking`.`owner`","`tabTravel Booking`.`creation`","`tabTravel Booking`.`modified`","`tabTravel Booking`.`modified_by`","`tabTravel Booking`.`_user_tags`","`tabTravel Booking`.`_comments`","`tabTravel Booking`.`_assign`","`tabTravel Booking`.`_liked_by`","`tabTravel Booking`.`docstatus`","`tabTravel Booking`.`idx`","`tabTravel Booking`.`customer`","`tabTravel Booking`.`assigned_ops_person`","`tabTravel Booking`.`status`"]', 'filters': '[]', 'order_by': '`tabTravel Booking`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-07-28 12:15:52,076 ERROR frappe Error while inserting deferred Error Log record: Error Log 8tgthu7061: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')\n        )))\n\n order by `tabTravel Booking`.`modified` desc\nlimit 20 offset 0' at line 8")) will get truncated, as max characters allowed is 140
+Site: travel.com
+Form Dict: {}

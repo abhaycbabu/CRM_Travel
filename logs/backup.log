@@ -1,0 +1,84 @@
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250721_113002-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-21 11:30:04.190855
+Config  : ./travel.com/private/backups/20250721_113002-travel_com-site_config_backup.json 116.0B
+Database: ./travel.com/private/backups/20250721_113002-travel_com-database.sql.gz         845.5KiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250721_173002-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-21 17:30:04.383133
+Config  : ./travel.com/private/backups/20250721_173002-travel_com-site_config_backup.json 116.0B
+Database: ./travel.com/private/backups/20250721_173002-travel_com-database.sql.gz         886.5KiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250722_113002-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-22 11:30:04.379792
+Config  : ./travel.com/private/backups/20250722_113002-travel_com-site_config_backup.json 116.0B
+Database: ./travel.com/private/backups/20250722_113002-travel_com-database.sql.gz         913.2KiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250722_173012-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-22 17:30:03.908375
+Config  : ./travel.com/private/backups/20250722_173012-travel_com-site_config_backup.json 116.0B
+Database: ./travel.com/private/backups/20250722_173012-travel_com-database.sql.gz         962.6KiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250723_113002-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-23 11:30:05.012942
+Config  : ./travel.com/private/backups/20250723_113002-travel_com-site_config_backup.json 116.0B
+Database: ./travel.com/private/backups/20250723_113002-travel_com-database.sql.gz         972.4KiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250723_173002-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-23 17:30:04.590652
+Config  : ./travel.com/private/backups/20250723_173002-travel_com-site_config_backup.json 116.0B
+Database: ./travel.com/private/backups/20250723_173002-travel_com-database.sql.gz         997.4KiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250724_113002-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-24 11:30:05.018049
+Config  : ./travel.com/private/backups/20250724_113002-travel_com-site_config_backup.json 116.0B
+Database: ./travel.com/private/backups/20250724_113002-travel_com-database.sql.gz         1015.1KiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250724_173002-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-24 17:30:04.235494
+Config  : ./travel.com/private/backups/20250724_173002-travel_com-site_config_backup.json 146.0B
+Database: ./travel.com/private/backups/20250724_173002-travel_com-database.sql.gz         1.0MiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250725_113000-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-25 11:30:02.621930
+Config  : ./travel.com/private/backups/20250725_113000-travel_com-site_config_backup.json 146.0B
+Database: ./travel.com/private/backups/20250725_113000-travel_com-database.sql.gz         1.0MiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250725_173001-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-25 17:30:03.234640
+Config  : ./travel.com/private/backups/20250725_173001-travel_com-site_config_backup.json 146.0B
+Database: ./travel.com/private/backups/20250725_173001-travel_com-database.sql.gz         1.1MiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250726_113016-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-26 11:30:18.834171
+Config  : ./travel.com/private/backups/20250726_113016-travel_com-site_config_backup.json 146.0B
+Database: ./travel.com/private/backups/20250726_113016-travel_com-database.sql.gz         1.1MiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250726_173001-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-26 17:30:03.977150
+Config  : ./travel.com/private/backups/20250726_173001-travel_com-site_config_backup.json 146.0B
+Database: ./travel.com/private/backups/20250726_173001-travel_com-database.sql.gz         1.1MiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250728_113002-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-28 11:30:04.753544
+Config  : ./travel.com/private/backups/20250728_113002-travel_com-site_config_backup.json 146.0B
+Database: ./travel.com/private/backups/20250728_113002-travel_com-database.sql.gz         1.1MiB
+Backup for Site travel.com has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_92ef3f287f531959 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _92ef3f287f531959 | /usr/bin/gzip >> ./travel.com/private/backups/20250728_173005-travel_com-database.sql.gz
+
+Backup Summary for travel.com at 2025-07-28 17:30:07.242615
+Config  : ./travel.com/private/backups/20250728_173005-travel_com-site_config_backup.json 146.0B
+Database: ./travel.com/private/backups/20250728_173005-travel_com-database.sql.gz         1.2MiB
+Backup for Site travel.com has been successfully completed
